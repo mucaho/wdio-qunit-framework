@@ -1,5 +1,9 @@
 {
-  "extends": "standard",
+  "extends": [
+    "standard",
+    "plugin:qunit/recommended",
+    "plugin:qunit/two"
+  ],
   "plugins": [
     "qunit"
   ],
