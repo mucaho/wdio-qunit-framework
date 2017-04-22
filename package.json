@@ -7,7 +7,7 @@
     "build": "run-s clean compile",
     "clean": "rm -rf ./build ./coverage",
     "compile": "babel lib/ -d build/",
-    "eslint": "eslint './lib/**/*.js' './test/**/*.js'",
+    "eslint": "eslint lib/ test/",
     "release": "np patch",
     "release:patch": "np patch",
     "release:minor": "np minor",

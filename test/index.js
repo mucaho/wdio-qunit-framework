@@ -13,7 +13,7 @@ sinon.assert.fail = function (message) {
 sinon.assert.pass = function (message) {
     QUnit.assert.ok(true, message)
 }
-sinon.addBehavior('when', function (fake, message) {
+sinon.addBehavior('thus', function (fake, message) {
     QUnit.assert.ok(true, message)
 })
 
@@ -26,8 +26,8 @@ QUnit.on('testEnd', function (testEnd) {
     process.stdout.write('.')
 
     testEnd.errors.forEach(function (error) {
-        console.error('Description: ' + error.message)
-        console.error(error.stack)
+        if (error.message) console.error(error.message)
+        if (error.stack) console.error(error.stack)
     })
 })
 
